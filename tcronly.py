@@ -15,18 +15,6 @@ ki = Aan.LINE() #seok
 ki.login(token="")
 ki.loginResult()
 
-kk = Aan.LINE() #Zin
-kk.login(token="")
-kk.loginResult()
-
-kc = Aan.LINE() #Mori
-kc.login(token="")
-kc.loginResult()
-
-ks = Aan.LINE() #Haru
-ks.login(token="")
-ks.loginResult()
-
 print "login success boy"
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -229,9 +217,6 @@ https://line.me/R/ti/p/~herrysz69
     "clock":False,
     "cName":"™Rai™ ",
     "cName2":"™Seok™ ",
-    "cName3":"™Zin™ ",
-    "cName4":"™Mori™ ",
-    "cName5":"™Haru™ ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -268,21 +253,6 @@ backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
 contact = ki.getProfile()
 backup = ki.getProfile()
-backup.displayName = contact.displayName
-backup.statusMessage = contact.statusMessage
-backup.pictureStatus = contact.pictureStatus
-contact = kk.getProfile()
-backup = kk.getProfile()
-backup.displayName = contact.displayName
-backup.statusMessage = contact.statusMessage
-backup.pictureStatus = contact.pictureStatus
-contact = kc.getProfile()
-backup = kc.getProfile()
-backup.displayName = contact.displayName
-backup.statusMessage = contact.statusMessage
-backup.pictureStatus = contact.pictureStatus
-contact = ks.getProfile()
-backup = ks.getProfile()
 backup.displayName = contact.displayName
 backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
@@ -525,123 +495,6 @@ def bot(op):
                 G.preventJoinByTicket = True
                 cl.updateGroup(G)
                 ki.updateGroup(G)
-                wait["blacklist"][op.param2] = True
-                
-            if op.param3 in Amid:
-              if op.param2 in Bmid:
-                G = kk.getGroup(op.param1)
-                G.preventJoinByTicket = False
-                kk.updateGroup(G)
-                Ticket = kk.reissueGroupTicket(op.param1)
-                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                G.preventJoinByTicket = True
-                kk.updateGroup(G)
-              else:
-                G = kk.getGroup(op.param1)
-                kk.kickoutFromGroup(op.param1,[op.param2])
-                G.preventJoinByTicket = False
-                kk.updateGroup(G)
-                Ticket = kk.reissueGroupTicket(op.param1)
-                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                G.preventJoinByTicket = True
-                #cl.updateGroup(G)
-                kk.updateGroup(G)
-                wait["blacklist"][op.param2] = True
-                
-            if op.param3 in Bmid:
-              if op.param2 in Cmid:
-                G = kc.getGroup(op.param1)
-                G.preventJoinByTicket = False
-                kc.updateGroup(G)
-                Ticket = kc.reissueGroupTicket(op.param1)
-                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                G.preventJoinByTicket = True
-                kc.updateGroup(G)
-              else:
-                G = kc.getGroup(op.param1)
-                kc.kickoutFromGroup(op.param1,[op.param2])
-                G.preventJoinByTicket = False
-                kc.updateGroup(G)
-                Ticket = kc.reissueGroupTicket(op.param1)
-                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                G.preventJoinByTicket = True
-                #cl.updateGroup(G)
-                kc.updateGroup(G)
-                wait["blacklist"][op.param2] = True
-                
-            if op.param3 in Cmid:
-              if op.param2 in Dmid:
-                G = ks.getGroup(op.param1)
-                G.preventJoinByTicket = False
-                ks.updateGroup(G)
-                Ticket = ks.reissueGroupTicket(op.param1)
-                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                G.preventJoinByTicket = True
-                ks.updateGroup(G)
-              else:
-                G = ks.getGroup(op.param1)
-                ks.kickoutFromGroup(op.param1,[op.param2])
-                G.preventJoinByTicket = False
-                ks.updateGroup(G)
-                Ticket = ks.reissueGroupTicket(op.param1)
-                cl.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ki.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kk.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                kc.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                ks.acceptGroupInvitationByTicket(op.param1,Ticket)
-                time.sleep(0.01)
-                G.preventJoinByTicket = True
-                #cl.updateGroup(G)
-                ks.updateGroup(G)
                 wait["blacklist"][op.param2] = True
                 
             if op.param3 in Dmid:
