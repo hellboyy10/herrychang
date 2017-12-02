@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 
-import Aan
-from Aan.lib.curve.ttypes import *
+import Tcr
+from Tcr.lib.curve.ttypes import *
 from datetime import datetime
 from bs4 import BeautifulSoup
 import time, random, sys, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, urllib2, wikipedia,tempfile,glob,shutil,unicodedata,goslate
 from gtts import gTTS
 
-cl = Aan.LINE() #Rai
+cl = Tcr.LINE() #Rai
 cl.login(token="")
 cl.loginResult()
 
-ki = Aan.LINE() #seok
+ki = Tcr.LINE() #seok
 ki.login(token="")
 ki.loginResult()
 
